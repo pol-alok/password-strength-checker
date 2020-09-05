@@ -36,29 +36,29 @@ $(function () {
 
   //For Increasing Sequence
   $.validator.addMethod(
-    "incrNum",
-    function (value, element) {
-      return !isIncrOrDescNum("0123456789",value);
-    },
-    `<p class="text-danger small">opps! Increasing Sequence not allowed!</p>`
+      "incrNum",
+      function (value, element) {
+        return !isIncrOrDescNum("0123456789",value);
+      },
+      `<p class="text-danger small">opps! Increasing Sequence not allowed!</p>`
   );
 
   //For Decreasing Sequence
   $.validator.addMethod(
-    "descNum",
-    function (value, element) {
-      return !isIncrOrDescNum("9876543210",value);
-    },
-    `<p class="text-danger small">opps! Decreasing Sequence not allowed!</p>`
+      "descNum",
+      function (value, element) {
+        return !isIncrOrDescNum("9876543210",value);
+      },
+      `<p class="text-danger small">opps! Decreasing Sequence not allowed!</p>`
   );
 
   //For valid repeated number
   $.validator.addMethod(
-    "repNumber",
-    function (value, element) {
-      return !value.match("([\\d])\\1{2,}");
-    },
-    `<p class="text-danger small">Please do not put repeated number!</p>`
+      "repNumber",
+      function (value, element) {
+        return !value.match("([\\d])\\1{2,}");
+      },
+      `<p class="text-danger small">Please do not put repeated number!</p>`
   );
 
   $("#user-input").on("submit", function (event) {
@@ -77,7 +77,7 @@ $(function () {
         },
       });
     });
-    
+
     // prevent default submit action
     event.preventDefault();
 
