@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Advance-Password-Validator</title>
+    <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1,user-scalable=no"
+    />
+
+    <!-- Bootstrap cdns -->
+    <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+            crossorigin="anonymous"
+    />
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"
+            integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg=="
+            crossorigin="anonymous"
+    ></script>
+    <!-- saprator -->
+    <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"
+    ></script>
+    <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"
+            integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf"
+            crossorigin="anonymous"
+    ></script>
+    <!-- fontawsome -->
+    <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- fonts -->
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900"
+    />
+    <style>
+        .header-site{
+            background-color: #000010;
+            background-image: url(https://searchenginereports.net/newassets/og_images/password-strength-checker.png);
+        }
+    </style>
+</head>
+<body>
+<header class="header shadow-sm header-site">
+<!--    <img class="img-fluid mt-5" src="./images/pass.png" alt="logo"/>-->
+    <h4 class="subtitle text-center">
+        <b>Advance Strong Password checker <i class="far fa-grin-alt"></i></b>
+    </h4>
+    <p class="gh-btns text-center">
+        <!-- Place this tag where you want the button to render. -->
+        <a
+                class="github-button"
+                href="https://github.com/pol-alok/quickpojo"
+                data-color-scheme="no-preference: dark; light: dark; dark: dark;"
+                data-size="large"
+                data-show-count="true"
+                aria-label="Star pol-alok/quickpojo on GitHub"
+        >Star</a
+        >
+        <a
+                class="github-button"
+                href="https://github.com/pol-alok/quickpojo/subscription"
+                data-color-scheme="no-preference: dark; light: dark; dark: dark;"
+                data-icon="octicon-eye"
+                data-size="large"
+                data-show-count="true"
+                aria-label="Watch pol-alok/quickpojo on GitHub"
+        >Watch</a
+        >
+        <a
+                class="github-button"
+                href="https://github.com/pol-alok/quickpojo/fork"
+                data-color-scheme="no-preference: dark; light: dark; dark: dark;"
+                data-icon="octicon-repo-forked"
+                data-size="large"
+                data-show-count="true"
+                aria-label="Fork pol-alok/quickpojo on GitHub"
+        >Fork</a
+        >
+    </p>
+</header>
+<div class="container mt-5">
+    <div class="row mt-3">
+        <div class="col-md-6 p-3">
+            <div class="row">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <div class="alert alert-info" role="alert">
+                            The following check is implemented :
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <ul>
+                                    <li>
+                                        <b>Required</b> Validation.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="list-group-item">
+                                <ul>
+                                    <li>
+                                        Checks for <b>Minimum length of 8.</b>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="list-group-item">
+                                <ul>
+                                    <li>
+                                        Checks <b>Repeated number.</b>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="list-group-item">
+                                <ul>
+                                    <li>
+                                        Checks for <b>Increasing number.</b>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="list-group-item">
+                                <ul>
+                                    <li>
+                                        Checks for <b>Decreasing number.</b>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6 p-3 mb-5">
+            <div class="card shadow-lg">
+                <div class="card-header text-center">
+                    Form
+                </div>
+                <div class="card-body">
+                    <form id="user-input">
+                        <div class="form-group">
+                            <label for="pass">Email</label>
+                            <input type="email" class="form-control validate" id="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="pass">Password</label>
+                            <input type="text" class="form-control validate" id="pass" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-block btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="card-footer text-muted text-center fixed-bottom border-top flex-column flex-md-row bg-white">
+        <p class="card-text">
+            Made with <span class="love">♥</span> by
+            <a
+                    class="text-primary"
+                    target="_blank"
+                    href="https://pol-alok.github.io/portfolio/"
+            >Raviaknt Pal</a
+            >
+        </p>
+    </div>
+</footer>
+<script src="./js/validation.js"></script>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>
